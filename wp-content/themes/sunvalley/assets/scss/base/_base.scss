@@ -1,0 +1,209 @@
+/* Body */ 
+body {
+	font-family: $font2;
+}
+
+/* Wrapper */
+.wrapper {
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 100%;
+	padding: 0 20px;
+	margin: 0 auto;
+	@include breakpoint($mobile){
+		padding: 0 20px;
+	}
+}
+/* Page Wrapper */
+.page-wrapper {
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 1360px;
+	padding: 0 40px;
+	margin: 0 auto;
+	@include breakpoint($medium){
+		max-width: 100%;
+	}
+	@include breakpoint($small){
+		max-width: 100%;
+	}
+	@include breakpoint($mobile){
+		max-width: 100%;
+		padding: 0;
+		padding-left: 30px;
+	}
+}
+
+/* Temporary Height Fix for Main */
+main {
+	position: relative;
+}
+
+/* Set img max width */
+img {
+	display:block;
+	width: auto;
+	height: auto;
+	margin: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+/*  Svg Icon <i><svg></svg></i> */
+i {
+	display: block;
+	svg {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+/* Layout & Flexbox Layout */
+.layout {
+	display: block;
+	width: 100%;
+	height: auto;
+	/* Flexbox Layout */
+	&.flex {
+		display: flex;
+		align-items: center;
+	}
+}
+/* Flexbox Layout */
+.flex {
+	display: flex;
+	align-items: center;
+}
+
+/* Row */
+.row {
+	display: block;
+	position: relative;
+	box-sizing: border-box;
+	padding: 20px;
+	width: 100%;
+	margin: auto;
+	/* Row Type 1 */
+	&.type-1 {
+		padding-left: 40px;
+		padding-right: 80px;
+		@include breakpoint($small){
+			padding: 0;
+		}
+	}
+	/* Row Type 2 */
+	&.type-2 {
+		padding-left: 20px;
+		padding-right: 60px;
+		@include breakpoint($small){
+			padding: 0;
+		}
+	}
+	/* Row Type 3 */
+	&.type-3 {
+		width: 80%;
+		margin: auto;
+		@include breakpoint($medium){
+			padding: 0;
+			width: 100%;
+		}
+		@include breakpoint($small){
+			padding: 0;
+			width: 100%;
+		}
+	}
+		/* Row Type 4 */
+	&.type-4 {
+		padding-top: 0;
+		padding-bottom: 0;
+		padding-left: 20px;
+		padding-right: 60px;
+		@include breakpoint($small){
+			padding: 0;
+		}
+	}
+
+}
+/* Box */
+.box {
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	padding: 30px;
+	/* Content Box */
+	&.content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		@include breakpoint($small){
+			padding: 15px 30px;
+		}
+	}
+	/* Image Box */
+	&.image {
+		padding: 0;
+		background-size: cover;
+		background-position: center center;
+	}
+}
+/* List */
+.list {
+	box-sizing: border-box;
+	padding:0 30px;
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			position: relative;
+			margin-bottom: 20px;
+			padding-left: 30px;
+			/* arrow */
+			&::before {
+				position: absolute;
+				left: 0;
+				top: 10px;
+				content:"";
+				background: url("../svg/list-arrow.svg");
+				height: 20px;
+				width: 20px;
+				background-size: cover;
+			}
+		}
+	}
+	@include breakpoint($small){
+		padding-left: 20px;
+		margin: 20px 0;
+	}
+}
+/* Button */
+.btn {
+	display: block;
+	width: auto;
+	margin: 0 auto;
+	text-align: center;
+	text-decoration: none;
+	color: $black;
+	font-family: $font1;
+	white-space: nowrap;
+	@include responsive-font(2vw, 18px, 26px, 20px);
+	padding: 15px 30px;
+	background: $grey1;
+	transition:background 0.55s ease;
+	&:hover {
+		background: $green1;
+		color: $white;
+	}
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font1;
+	font-weight: 700;
+}

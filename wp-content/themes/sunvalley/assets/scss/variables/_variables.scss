@@ -1,0 +1,65 @@
+/* Breakpoints */
+$mobile: 0px 565px;
+$small: 0px 768px;
+$medium: 769px 1023px;
+$laptop: (max-device-width 1280px)(orientation landscape);
+$large: (min-width 1240px);
+$extra-large: (min-width 1280px);
+
+/* Colors */
+$darkblue: #002171;
+$lightblue: #5472d3;
+$gray: #7F7F7F;
+$gray2: #D4DBE5;
+$red: #e53935;
+$border: #bdc3c7;
+$offwhite:#ecf0f1;
+$silver: #bdc3c7;
+$orange: #f4511e;
+$yellow: #fdd835;
+
+$border1: #BDC3C7;
+/* Flat Colors */
+/* Black */
+$black: #000000;
+/* White */
+$white: #ffffff;
+$white1: #ecf0f1;
+$white2: #D2D7D3;
+/* Blue */
+$blue1: #3498DB;
+$blue2: #2874AB;
+$blue3: #1C507B;
+$blue4: #12203A;
+/* Green */
+$green1: #2ecc71;
+$green2: #27ae60;
+
+/* Bluegreen */
+$bluegreen:#34B69F;
+/* Red */
+$red1: #e74c3c;
+$red2: #c0392b;
+/* Purple */
+$purple1: #9b59b6;
+$purple2: #8e44ad;
+/* Yellow */
+$yellow: #f1c40f;
+/* Grey */
+$grey1: #bdc3c7;
+$grey2: #95a5a6;
+$grey3: #7f8c8d;
+/* Red */
+$red1: #e74c3c;
+$red2: #c0392b;
+/* Orange */
+$orange1: #f39c12;
+$orange2: #e67e22;
+$orange3: #d35400;
+
+/* Fonts */
+$font1: 'Open Sans', sans-serif;
+$font2: 'Roboto', serif;
+
+/* Text Shadow */
+$shadow1: 2px 4px 3px rgba(0,0,0,0.3);

@@ -1,0 +1,86 @@
+/* Contact Block */
+.contact-block {
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-start;
+	width: 100%;
+	height: auto;
+	padding: 20px 0;
+	@include breakpoint($small){
+		flex-wrap: wrap;
+	}
+	@include breakpoint($medium){
+		flex-wrap: wrap;
+	}
+	/* Content Wrapper */
+	.content-wrapper {
+		min-width: 50%;
+		flex: 1;
+		margin-right: 20px;
+		/* Content */
+		.content {
+			width: 100%;
+			box-sizing: border-box;
+			padding: 30px;
+			margin: 0 auto;
+			margin-bottom: 40px;
+			background: $blue3;
+			@include boxShadow(1);
+			p {
+				width: 100%;
+				margin: 0 auto;
+				color: $white;
+				@include responsive-font(2vw, 20px, 28px, 20px);
+			}
+		}
+		@include breakpoint($small){
+			width: 100%;
+			margin-right: 0;
+		}
+	}
+	/* Contact Link */
+	.contact {
+		display: flex;
+		align-items: flex-start;
+		/* Symbol */
+		.symbol {
+			z-index: 300;
+			margin-top: 30px;
+			margin-right: -20px;
+			i {
+				height: 150px;
+				width: 150px;
+				border: 2px solid $white;
+				box-sizing: border-box;
+				background-image:url("../svg/akz.svg");
+				background-size: cover;
+				background-position: center center;
+				@include boxShadow(1);
+			}
+		}
+		/* Link */
+		.link {
+			a {
+				text-decoration: none;
+				padding: 10px 30px;
+				color: $white;
+				@include responsive-font(2vw, 20px, 34px, 20px);
+				white-space: nowrap;
+				background: $grey3;
+				@include boxShadow(4);
+				transition:background 0.55s ease;
+				&:hover {
+					background: $green1;
+				}
+			}
+		}
+	}
+	/* Right Layout */
+	&.right {
+		justify-content: flex-end;
+	}
+	/* Center Layout */
+	&.center {
+		justify-content: center;
+	}
+}

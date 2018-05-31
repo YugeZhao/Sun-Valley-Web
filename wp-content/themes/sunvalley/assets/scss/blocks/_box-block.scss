@@ -1,0 +1,40 @@
+.box-block {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	box-sizing: border-box;
+	padding: 20px;
+	/* Box Styles */
+	.box-wrapper {
+		display: block;
+		text-align: center;
+		margin: 20px auto;
+		width: 100%;
+		max-width: 50rem;
+		box-sizing: border-box;
+		padding: 15px 30px;
+		border: 2px solid $black;
+		background: $grey1;
+		p {
+			margin: 0;
+			@include responsive-font(2vw, 18px, 26px, 20px);
+			font-weight: 700;
+		}
+	}
+	/* Small Breakpoint */
+	@include breakpoint($small){
+		padding: 0;
+		.box-wrapper {
+			padding: 15px;
+			max-width: 100%;
+		}
+	}
+
+	/* Orange Style */
+	&.orange {
+		.box-wrapper {
+			border-color: $orange1;
+		}
+	}
+	
+}

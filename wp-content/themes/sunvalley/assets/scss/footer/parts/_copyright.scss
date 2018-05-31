@@ -1,0 +1,24 @@
+.copyright {
+	font-family: $font2;
+	font-weight: 300;
+	margin-right: 40px;
+	p {
+		margin: 0;
+		@include responsive-font(1vw, 14px, 18px, 18px);
+		color: $gray;
+	}
+	@include breakpoint($mobile){
+		margin: 0 auto;
+	}
+}
+
+.small-copy {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px 20px;
+	p {
+		color: $gray;
+		font-size: 14px;
+		margin: 0;
+	}
+}

@@ -1,0 +1,74 @@
+#rfp-modal {
+	/* Title */
+	.title {
+		width: 100%;
+		background: $blue4;
+		padding: 20px 30px;
+		span {
+			display: block;
+			color: $white;
+			font-family: $font1;
+		}
+	}
+	.instructions {
+		padding: 0 30px;
+	}
+	form {
+		position: relative;
+		display: block;
+		box-sizing: border-box;
+		padding: 30px;
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-wrap: wrap;
+			li {
+				box-sizing: border-box;
+				width: 50%;
+				margin-bottom: 10px;
+				@include breakpoint($mobile){
+					width: 100%;
+				}
+				label {
+					display: none;
+				}
+				input {
+					width: 100%;
+					padding: 10px 20px;
+				}
+				&:nth-child(odd){
+					padding-right: 20px;
+					@include breakpoint($mobile){
+						padding-right: 0;
+					}
+				}
+			}
+		}
+		.gform_footer {
+			width: 100%;
+			text-align: center;
+			input {
+				cursor: pointer;
+				display: block;
+				box-sizing: border-box;
+				background: $green2;
+				border: none;
+				padding: 10px;
+				margin: 20px 0;
+				width: 175px;
+				color: $white;
+				font-family: $font2;
+				transition:background 0.55s ease;
+				@include responsive-font(3vw, 20px, 24px, 20px);
+				&:hover {
+					background: $green1;
+				}
+				@include breakpoint($mobile){
+					margin: 20px auto;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,128 @@
+.table-block {
+	width: 100%;
+	margin: auto;
+	/* Layout */
+	.table-layout {
+		display: flex;
+		flex-wrap: wrap;
+		box-sizing: border-box;
+		border: 2px solid $black;
+		/* Titles */
+		.title {
+			box-sizing: border-box;
+			width: 50%;
+			padding: 10px 20px;
+			background: $grey1;
+			p {
+				margin: 0;
+				color: $black;
+				font-weight: 700;
+				@include responsive-font(1.5vw, 18px, 24px, 20px);
+			}
+			&.column-1 {
+				border-right: 2px solid $black;
+			}
+			@include breakpoint($small){
+				width: 100%;
+				&.column-1 {
+					border-right: none;
+					order: 0;
+				}
+				&.column-2 {
+					order: 4;
+					border-top: 2px solid $black;
+				}
+			}
+		}
+		/* Content */
+		.content {
+			width: 50%;
+			box-sizing: border-box;
+			border-top: 2px solid $black;
+			padding: 10px 20px;
+			p {
+				margin: 0;
+				@include responsive-font(1.5vw, 20px, 24px, 20px);
+			}
+			&.column-1 {
+				border-right: 2px solid $black;
+			}
+			@include breakpoint($small){
+				width: 100%;
+				&.column-1 {
+					border-right: none;
+					&.row-1 {
+						order: 2;
+					}
+					&.row-2 {
+						order: 3;
+					}
+				}
+				&.column-2 {
+					&.row-1 {
+						order: 5;
+					}
+					&.row-2 {
+						order: 6;
+					}
+
+				}
+			}
+		}
+	}
+	/* Orange Style */
+	&.orange {
+		.title {
+			background: $orange2;
+			p {
+				color: $black;
+			}
+		}
+	}
+	/* Yellow Style */
+	&.yellow {
+		.title {
+			background: $yellow;
+			p {
+				color: $black;
+			}
+		}
+	}
+	/* Blue Style */
+	&.blue {
+		.title {
+			background: $blue1;
+			p {
+				color: $white;
+			}
+		}
+	}
+	/* Red Style */
+	&.red {
+		.title {
+			background: $red1;
+			p {
+				color: $white;
+			}
+		}
+	}
+	/* Purple Style */
+	&.purple {
+		.title {
+			background: $purple2;
+			p {
+				color: $white;
+			}
+		}
+	}
+	/* Purple Style */
+	&.green {
+		.title {
+			background: $green2;
+			p {
+				color: $white;
+			}
+		}
+	}
+
+}

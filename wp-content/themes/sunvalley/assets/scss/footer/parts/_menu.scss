@@ -1,0 +1,37 @@
+.menu {
+	flex-grow: 1;
+	/* Footer Menu */
+	.footer-menu {
+		font-family: $font2;
+		font-weight: 300;
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			li {
+				display: inline-block;
+				margin-right: 30px;
+				a {
+					display: block;
+					@include responsive-font(1vw, 16px, 18px, 18px);
+					color: $gray;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	@include breakpoint($mobile){
+		.footer-menu {
+			width: 100%;
+			ul {
+				text-align: right;
+				li {
+					margin-right: 10px;
+					a {
+						@include responsive-font(1vw, 14px, 18px, 18px);
+					}
+				}
+			}
+		}
+	}
+}

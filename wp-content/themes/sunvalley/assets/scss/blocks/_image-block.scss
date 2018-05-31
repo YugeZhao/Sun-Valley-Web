@@ -1,0 +1,104 @@
+/* Image Block */
+.image-block {
+	display: flex;
+	align-items: flex-start;
+	width: 100%;
+	height: auto;
+	box-sizing: border-box;
+	padding: 20px;
+	justify-content: flex-start;
+	@include breakpoint($small){
+		flex-wrap: wrap;
+		align-items: flex-start;
+		padding: 10px 0;
+	}
+	
+	/* Image */
+	.image {
+		width: 100%;
+		img {
+			display: block;
+			width: auto;
+			height: auto;
+			margin: auto;
+			max-width: 100%;
+			max-height: 100%;
+			//@include boxShadow(2);
+		}
+	}
+	/* Content Wrapper */
+	.content-wrapper { 
+		flex:1;
+		/* Content */
+		.content {
+			box-sizing: border-box;
+			margin-top: 60px;
+			padding: 30px;
+			@include transparent-bg($blue1, 0.2);
+			//@include boxShadow(3);
+			p {
+				width: 100%;
+				margin: 0 auto;
+				color: inherit;
+				@include responsive-font(2vw, 20px, 28px, 20px);
+			}
+		}
+		@include breakpoint($small){
+			width: 100%;
+			.content {
+				text-align: center;
+				padding: 10px 30px;
+				margin-top: 0;
+			}
+		}
+	}
+	
+	/* Image on the right */
+	&.right {
+		flex-direction: row-reverse;
+		.image {
+			margin-left: 80px;
+		}
+		@include breakpoint($small){
+			.image {
+				margin-left: 0;
+			}
+		}
+	}
+	/* Small Size Image */
+	&.small {
+		margin: auto;
+		.image {
+			max-width: 250px;
+			img {
+				max-width: 250px;
+			}
+		}
+		@include breakpoint($medium){
+			.image {
+				margin-left: 40px;
+			}
+		}
+		@include breakpoint($small){
+			flex-wrap: nowrap;
+			.image {
+				width: auto;
+				max-width: 100%;
+				img {
+					max-width: 125px;
+					margin: 0;
+				}
+			}
+		}
+		@include breakpoint($mobile){
+			flex-wrap: wrap;
+			.image {
+				width: 100%;
+				img {
+					margin: auto;
+				}
+			}
+		}
+	}
+	
+}
